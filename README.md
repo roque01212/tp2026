@@ -1,75 +1,77 @@
-# React + TypeScript + Vite
+# GameZone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proyecto realizado con **React + Vite** para el trabajo práctico de Desarrollo Web con React.
 
-Currently, two official plugins are available:
+La aplicación utiliza componentes funcionales, props y CSS Modules.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Requisitos
 
-## React Compiler
+Antes de iniciar el proyecto, tener instalado:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Node.js
+- npm
 
-## Expanding the ESLint configuration
+## Instalación
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Clonar el repositorio:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+git clone URL_DEL_REPOSITORIO
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Entrar a la carpeta del proyecto:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+cd nombre-del-proyecto
 ```
+
+Instalar las dependencias:
+
+```bash
+npm install
+```
+
+## Ejecutar el proyecto
+
+Para iniciar el servidor de desarrollo:
+
+```bash
+npm run dev
+```
+
+Luego abrir en el navegador la dirección que muestra Vite, normalmente:
+
+```text
+http://localhost:5173
+```
+
+## Tecnologías utilizadas
+
+- React
+- Vite
+- JavaScript
+- CSS Modules
+
+## Estructura principal
+
+```text
+src/
+├── components/
+│   ├── Navbar/
+│   ├── Main/
+│   └── Footer/
+├── App.jsx
+├── App.css
+├── index.css
+└── main.jsx
+```
+
+## Componentes
+
+La aplicación está dividida en:
+
+- `Navbar`
+- `Main`
+- `Footer`
+
+Los datos principales se definen en `App.jsx` y se envían a los componentes mediante props.
