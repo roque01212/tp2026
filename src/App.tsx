@@ -11,19 +11,34 @@ function App() {
   const descriptionMain =
     "Descubrí algunos de los videojuegos más populares y disfrutá diferentes aventuras";
   const itemsMain = [
-    "The Legend of Zelda: Breath of the Wild",
-    "Super Mario Odyssey",
-    "Red Dead Redemption 2",
-    "The Witcher 3: Wild Hunt",
-    "God of War",
+    {
+      nombre: "The Legend of Zelda",
+      genero: "Aventura",
+    },
+    {
+      nombre: "Red Dead Redemption 2",
+      genero: "Acción y aventura",
+    },
+    {
+      nombre: "God of War",
+      genero: "Acción",
+    },
+    {
+      nombre: "The Witcher 3: Wild Hunt",
+      genero: "RPG",
+    },
+    {
+      nombre: "Minecraft",
+      genero: "Sandbox",
+    },
   ];
 
   return (
-    <>
+    <div className="app">
       <Navbar title={titleNav} links={links} />
       <Main title={titleMain} description={descriptionMain} items={itemsMain} />
       <Footer text="Todos los derechos reservados" anio={2026} />
-    </>
+    </div>
   );
 }
 

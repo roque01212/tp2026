@@ -1,5 +1,5 @@
 .main {
-  min-height: 70vh;
+  flex: 1;
   padding: 60px 32px;
   background-color: #f8fafc;
 }

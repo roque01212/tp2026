@@ -1,9 +1,14 @@
+import { Card } from "../Card/Card";
 import style from "./Main.module.css";
 
+interface Juego {
+  nombre: string;
+  genero: string;
+}
 interface Props {
   title: string;
   description: string;
-  items: string[];
+  items: Juego[];
 }
 export const Main = ({ title, description, items }: Props) => {
   return (
@@ -13,9 +18,7 @@ export const Main = ({ title, description, items }: Props) => {
         <p className={style.description}>{description}</p>
         <div className={style.items}>
           {items.map((item) => (
-            <div key={item} className={style.card}>
-              <h3>{item}</h3>
-            </div>
+            <Card key={item.nombre} nombre={item.nombre} genero={item.genero} />
           ))}
         </div>
       </section>
